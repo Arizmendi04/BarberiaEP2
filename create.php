@@ -23,6 +23,9 @@
        <script src='Static/js/appvlidacion.js'></script>         
 </form>
 
-<p><a href="admin.php"><img src="./Static/img/back.png"></p>
+<a href="admin.php" class="enlace">
+  <img src="./Static/img/back.png">
+  <p>Regresar</p>
+</a>
            
 <?php  include 'includes/footer.php'; ?>

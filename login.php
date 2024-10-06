@@ -22,4 +22,11 @@
 
 </form> 
 
+<br><br><br>
+
+<a href="index.php" class="enlace">
+    <img src="./Static/img/regresar.png">
+    <p>Regresar</p>
+</a>
+
 <script src="Static/js/validaciones.js"></script>  

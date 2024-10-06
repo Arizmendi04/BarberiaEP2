@@ -30,5 +30,10 @@
 ?>
 
     </table>
+    
+<a href="admin.php" class="enlace">
+    <img src="./Static/img/back.png">
+    <p>Regresar</p>
+</a>
 
 <?php include 'includes/footer.php'?>
