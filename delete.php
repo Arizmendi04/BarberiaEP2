@@ -10,7 +10,7 @@
             die("Eliminacion fallo");
         }
         sleep(3);
-        header("Location: index.php");
+        header("Location: admin.php");
     }
 ?>
 
