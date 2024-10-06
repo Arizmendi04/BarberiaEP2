@@ -10,7 +10,7 @@
             die("Eliminacion fallo");
         }
         sleep(3);
-        header("Location: admin.php");
+        header("Location: consultaDU.php");
     }
 ?>
 

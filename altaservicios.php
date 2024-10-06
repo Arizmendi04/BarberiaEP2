@@ -10,7 +10,7 @@
     $execute=mysqli_query($conn, $sql);
     echo"<CENTER><H2>DATOS INSERTADOS</H2></CENTER>";
     sleep(3);
-    header("Location: index.php");
+    header("Location: admin.php");
 
 ?>
 

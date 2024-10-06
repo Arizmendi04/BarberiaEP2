@@ -54,6 +54,8 @@
 
 </form>
 
+<br><br><br>
+
 <a href="consultaDU.php" class="enlace">
   <img src="./Static/img/back.png">
   <p>Regresar</p>

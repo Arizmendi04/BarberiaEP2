@@ -30,7 +30,9 @@
 ?>
 
     </table>
-    
+
+<br><br><br>
+
 <a href="admin.php" class="enlace">
     <img src="./Static/img/back.png">
     <p>Regresar</p>
