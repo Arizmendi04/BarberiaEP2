@@ -8,7 +8,6 @@
     $sql="INSERT INTO servicios (nombre, precio)
     VALUES('$nombre', $precio);";
     $execute=mysqli_query($conn, $sql);
-    echo"<CENTER><H2>DATOS INSERTADOS</H2></CENTER>";
     sleep(3);
     header("Location: admin.php");
 
