@@ -14,7 +14,7 @@
 
 <?php
 
-    $sql = "select * from horarios;";
+    $sql = "select * from horarios where disponible = 1;";
     $exec = mysqli_query($conn, $sql);
 
     // Ciclo para recorrer fila por fila los resultados

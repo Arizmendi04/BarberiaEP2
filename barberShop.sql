@@ -69,6 +69,8 @@ INSERT INTO horarios (fecha, hora_inicio, hora_fin) VALUES
     ('2024-10-08', '09:00:00', '10:00:00'),
     ('2024-10-08', '10:00:00', '11:00:00');
 
+ALTER TABLE horarios ADD COLUMN disponible BOOLEAN DEFAULT 1;
+
 -- Consulta para verificar los servicios
 SELECT * FROM servicios;
 

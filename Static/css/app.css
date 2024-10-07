@@ -219,10 +219,18 @@ height: 40px;
 font-size: 2rem;
 }
 
+.formulario_entrada{
+    width: 70%;
+    background: rgb(245,240,240);
+    border: 3px solid transparent;
+    border-radius: 6px;
+    height: 40px;
+    font-size: 2rem;
+    }
+
 .formulario_input:focus{
 border: 3px dotted rgb(252, 125, 7);
 outline: none;
-
 }
 
 .formulario_label{
