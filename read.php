@@ -1,7 +1,7 @@
 <?php include "Static/connect/db.php" ?>
 <?php include 'includes/header.php'?>
 
-    <table class = "table-primary">
+    <table class = "table-primary centered-table">
         <thead>
             <TR>
                 <TH>Id</TH>

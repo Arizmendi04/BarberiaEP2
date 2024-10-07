@@ -288,6 +288,11 @@ outline: none;
     margin-right: 15px;
 }
 
+.centered-table {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    text-align: center; /* Alinea el contenido de la tabla al centro */
+}
+
 
 
 

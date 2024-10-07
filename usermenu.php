@@ -4,19 +4,25 @@
     session_start();
     if (isset($_SESSION['usuario'])) {
         $user = $_SESSION['usuario'];
-        echo "<h1>Iniciaste sesión como: " . $user . "</h1>";
 ?>
 
     <article class="entrada">
         <div class="entrada_contenido">
             <h4 class="no-margin">Barbershop México</h4>
-            <a href="admin.php">
-                <img src="./Static/img/user.png">
+            <?php echo "<h4>Hola " . $user . "</h4> <br><br>"; ?>
+            <a href="registrarhorario.php" class="enlace">
+                <img src="./Static/img/registrarservicio.png">
+                <p>Solicitar servicio</p>
             </a>
-            <a href="logout.php">
+            <a href="consultarhorario.php" class="enlace">
+                <img src="./Static/img/consultarhorarios.png">
+                <p>Consultar servicios disponibles</p>
+            </a>
+            <a href="logout.php" class="enlace">
                 <img src="./Static/img/logout.png">
+                <p>Cerrar sesión</p>
             </a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque</p>
+            <p class="parrafo">Ahora que formas parte de nuestra comunidad, puedes acceder a los servicios exclusivos y agendar tus citas según los horarios disponibles. Nos complace tenerte con nosotros, y estamos listos para ofrecerte la mejor experiencia de barbería.</p>
         </div>
         <div class="entrada__imagen">
             <picture> 
