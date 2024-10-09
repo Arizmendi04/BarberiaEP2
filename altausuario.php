@@ -39,10 +39,19 @@
                 $mail->addAddress($correo); // Agregar el correo del usuario como destinatario
                 
                 // Contenido del correo
+                $mail->CharSet = 'UTF-8';
                 $mail->isHTML(false);
-                $mail->Subject = "Registro de nuevo usuario";
-                $mail->Body = "Usuario: $nombreusuario\nContraseña: $contra\n";
-
+                $mail->Subject = "Registro de nuevo usuario en Barbershop";
+                $mail->Body = "¡Gracias por registrarte!\n\n" .
+                "Hola *$nombreusuario*,\n\n" .
+                "Te damos la bienvenida a nuestra comunidad de Barbershop. Tus credenciales son las siguientes:\n" .
+                "-----------------------------------------\n" .
+                "* Usuario: *$nombreusuario*\n" .
+                "* Contraseña: *$contra*\n" .
+                "-----------------------------------------\n\n" .
+                "¡Esperamos que disfrutes de nuestros servicios!\n\n" .
+                "Saludos,\n" .
+                "El equipo de Barbershop";
                 // Enviar correo
                 $mail->send();
 ?>
