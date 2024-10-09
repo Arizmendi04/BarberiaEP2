@@ -1,4 +1,5 @@
 <?php include 'includes/header.php' ?>
+// Hola 
 
 <article class="entrada">
     <div class="entrada__imagen">
