@@ -1,5 +1,4 @@
 <?php include 'includes/header.php' ?>
-// Hola 
 
 <article class="entrada">
     <div class="entrada__imagen">
@@ -23,14 +22,14 @@
 
             <p class="parrafo">Bienvenido, administrador. En la parte superior encontrarás las opciones para crear, leer, actualizar y eliminar registros. Usa estas herramientas para gestionar fácilmente los datos de los usuarios y los servicios de la barbería.</p>
 
+            <a href="menuadmin.php" class="enlace">
+                <img src="./Static/img/regresar.png">
+                <p>Regresar</p>
+            </a>
+
             <picture>
                 <img loading="lazy" src="./Static/img/2.jpg" alt="imagen blog"> 
             </picture>
         </div>
     </div>
 </article>
-
-<a href="menuadmin.php" class="enlace">
-    <img src="./Static/img/regresar.png">
-    <p>Regresar</p>
-</a>
