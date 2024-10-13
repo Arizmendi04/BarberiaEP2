@@ -1,6 +1,4 @@
-<?php  include '../includes/header.php'?>
-
-<link rel="stylesheet" href="../Static/css/app.css">
+<?php  include '../includes/head.php'?>
 
 <?php
       session_start();

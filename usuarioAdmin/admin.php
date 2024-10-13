@@ -1,5 +1,15 @@
 <?php include '../includes/head.php' ?>
 
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
 <article class="entrada">
     <div class="entrada__imagen">
         <div class="entrada_contenido">

@@ -1,5 +1,15 @@
 <?php  include '../includes/head.php'?>
 
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
  <h6>Incorpora servicios</h6>
  
   <form method="POST" name="frm1" id="frm1" action="altaservicios.php">

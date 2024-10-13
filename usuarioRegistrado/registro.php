@@ -1,5 +1,15 @@
 <?php include '../includes/header.php'; ?>
 
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
 <h6>Regístrate</h6>
 
 <link rel="stylesheet" href="../Static/css/app.css">

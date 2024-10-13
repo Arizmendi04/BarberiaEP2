@@ -1,6 +1,16 @@
 <?php include "../Static/connect/db.php" ?>
 <?php include '../includes/head.php'?>
 
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
     <h2>Los horarios disponibles son: </h2>
 
     <table class = "table-primary centered-table">

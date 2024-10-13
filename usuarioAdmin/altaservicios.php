@@ -1,6 +1,16 @@
 <?php include "../Static/connect/db.php" ?>
 <?php include '../includes/header.php'?>
 
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
 <?php 
 
     $nombre= $_REQUEST['nombre'];
