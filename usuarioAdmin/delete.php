@@ -1,5 +1,5 @@
-<?php include "Static/connect/db.php" ?>
-<?php include 'includes/header.php' ?>
+<?php include "../Static/connect/db.php" ?>
+<?php include '../includes/head.php' ?>
 
 <?php
     if(isset($_GET['id'])){
@@ -14,4 +14,4 @@
     }
 ?>
 
-<?php include 'includes/footer.php'?>
+<?php include '../includes/footer.php'?>

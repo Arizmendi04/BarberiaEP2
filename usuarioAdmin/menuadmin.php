@@ -1,4 +1,6 @@
-<?php  include 'includes/header.php'?>
+<?php  include '../includes/header.php'?>
+
+<link rel="stylesheet" href="../Static/css/app.css">
 
 <?php
       session_start();
@@ -14,12 +16,12 @@
                         ?>
 
                         <a href="admin.php" class="enlace">
-                              <img src="./Static/img/admin.png">
+                              <img src="../Static/img/admin.png">
                               <p>Opciones</p>
                         </a>
                         
-                        <a href="logout.php" class="enlace">
-                              <img src="./Static/img/logout.png">
+                        <a href="../logout.php" class="enlace">
+                              <img src="../Static/img/logout.png">
                               <p>Cerrar sesión</p>
                         </a>
 
@@ -28,7 +30,7 @@
 
                   <div class="entrada__imagen">
                         <picture> 
-                              <img loading="lazy" src="./Static/img/2.jpg"> 
+                              <img loading="lazy" src="../Static/img/2.jpg"> 
                         </picture> 
                   </div>
 
@@ -39,4 +41,4 @@
       }
 ?>
         
-<?php  include 'includes/footer.php'; ?>
+<?php  include '../includes/footer.php'; ?>

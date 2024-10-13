@@ -1,12 +1,14 @@
-<?php include "Static/connect/db.php" ?>
-<?php include 'includes/header.php'?>
+<?php include "../Static/connect/db.php" ?>
+<?php include '../includes/head.php'?>
 
-    <table class = "table-primary centered-table">
+    <table class = "table-info">
         <thead>
             <TR>
                 <TH>Id</TH>
                 <TH>Servicio</TH>
                 <TH>Costo</TH>
+                <TH>Eliminar</TH>
+                <TH>Actualizar</TH>
             </TR>
         </thead>
 
@@ -23,6 +25,17 @@
             <th><?php echo $rows['id']; ?></th>
             <th><?php echo $rows['nombre']; ?></th>
             <th><?php echo $rows['precio']; ?></th>
+            <th>
+                <a href="delete.php?id=<?php echo $rows['id']?>">
+                    <img src="../Static/img/iconobasura.svg"></p>
+                </a>
+            </th>
+            
+            <th>
+                <a href="update.php?id=<?php echo $rows['id']?>">
+                <img src="../Static/img/iconoedit.png">
+                </a>
+            </th>
         </tr>
 
 <?php    
@@ -34,8 +47,8 @@
 <br><br><br>
 
 <a href="admin.php" class="enlace">
-    <img src="./Static/img/back.png">
+    <img src="../Static/img/back.png">
     <p>Regresar</p>
 </a>
 
-<?php include 'includes/footer.php'?>
+<?php include '../includes/footer.php'?>

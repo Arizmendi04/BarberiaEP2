@@ -10,12 +10,12 @@
                   <p>Iniciar Sesión</p>
             </a>
                   
-            <a href="registro.php" class="enlace">
+            <a href="usuarioRegistrado/registro.php" class="enlace">
                   <img src="./Static/img/registrar.png">
                   <p>Registrarse</p>
             </a>
 
-            <a href="consulta.php" class="enlace">
+            <a href="usuarioWeb/consulta.php" class="enlace">
                   <img src="./Static/img/services.png">
                   <p>Mira nuestros servicios</p>
             </a>

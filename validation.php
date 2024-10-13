@@ -17,9 +17,9 @@
     if(($row["usuario"] == $user) && ($row["contrasena"] == $password)){
         $_SESSION["usuario"] = $user;
         if (str_starts_with($user,"admin")) {
-            header("Location: menuadmin.php");
+            header("Location: usuarioAdmin/menuadmin.php");
         } else {
-            header("Location: usermenu.php");
+            header("Location: usuarioRegistrado/usermenu.php");
         }
     }else{
         header("Location: login.php");

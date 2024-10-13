@@ -1,4 +1,4 @@
-<?php  include 'includes/header.php'?>
+<?php  include '../includes/head.php'?>
 
  <h6>Incorpora servicios</h6>
  
@@ -20,12 +20,12 @@
      <div class="form_container">                    
        <input type="button" value="Enviar Datos"  class="formulario_btn" onclick="validacion()">                    
        </div> 
-       <script src='Static/js/appvlidacion.js'></script>         
+       <script src='../Static/js/appvlidacion.js'></script>         
 </form>
 
 <a href="admin.php" class="enlace">
-  <img src="./Static/img/back.png">
+  <img src="../Static/img/back.png">
   <p>Regresar</p>
 </a>
            
-<?php  include 'includes/footer.php'; ?>
+<?php  include '../includes/footer.php'; ?>

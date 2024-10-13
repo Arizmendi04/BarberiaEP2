@@ -1,4 +1,5 @@
-<?php include "Static/connect/db.php" ?>
+<?php include "../Static/connect/db.php" ?>
+<?php include '../includes/head.php'?>
 
 <?php
     if(isset($_GET['id'])){
@@ -28,8 +29,6 @@
 
 ?>
 
-<?php include 'includes/header.php'?>
-
 <form action="update.php?id=<?php echo $_GET['id'];?>" method = "POST">
     
     <div class="form_container">
@@ -57,8 +56,8 @@
 <br><br><br>
 
 <a href="consultaDU.php" class="enlace">
-  <img src="./Static/img/back.png">
+  <img src="../Static/img/back.png">
   <p>Regresar</p>
 </a>
 
-<?php include 'includes/footer.php'?>
+<?php include '../includes/footer.php'?>

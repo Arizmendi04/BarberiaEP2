@@ -1,4 +1,4 @@
-<?php include "Static/connect/db.php"; ?>
+<?php include "../Static/connect/db.php"; ?>
 
 <?php
     // Obtener los datos del formulario
