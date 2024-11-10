@@ -14,8 +14,8 @@ CREATE TABLE servicios (
 -- Tabla de Usuarios
 CREATE TABLE usuarios (
     id INT(11) NOT NULL AUTO_INCREMENT,
-    usuario VARCHAR(15) NOT NULL,
-    contrasena VARCHAR(10) NOT NULL,
+    usuario VARCHAR(40) NOT NULL,
+    contrasena VARCHAR(15) NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -57,9 +57,8 @@ INSERT INTO servicios (nombre, precio) VALUES
 
 -- Insertar algunos datos de ejemplo en la tabla de usuarios
 INSERT INTO usuarios (usuario, contrasena) VALUES 
-    ('admin1', '123qaz'),
-    ('admin2', '123qaz'),
-    ("Jesus","123");
+    ('Admin@upemor.edu.mx', '12345qaz'),
+    ("Jesus@upemor.edu.mx","12345678");
 
 -- Insertar algunos horarios de ejemplo
 INSERT INTO horarios (fecha, hora_inicio, hora_fin) VALUES
