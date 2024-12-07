@@ -1,0 +1,90 @@
+/* Contenedor del formulario */
+.form_container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Etiquetas del formulario */
+.formulario_label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada */
+.formulario_input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.formulario_input:focus {
+    border-color: #f06305;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+}
+
+/* Botón de envío */
+.formulario_btn {
+    width: 100%;
+    padding: 5px;
+    background-color: #bb5106;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.formulario_btn:hover {
+    background-color: #ff7605;
+}
+
+/* Mensajes de alerta */
+.alert {
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    display: none;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+}
+
+/* Estilo para el enlace de regresar */
+.enlace {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0056b3;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.enlace img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.enlace:hover {
+    color: #004494;
+}

@@ -1,5 +1,15 @@
-<?php include "Static/connect/db.php" ?>
-<?php include 'includes/header.php'?>
+<?php include "../Static/connect/db.php" ?>
+<?php include '../includes/head.php'?>
+
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
 
     <h2>Los horarios disponibles son: </h2>
 
@@ -36,8 +46,8 @@
 <br><br><br>
 
 <a href="usermenu.php" class="enlace">
-    <img src="./Static/img/back.png">
+    <img src="../Static/img/back.png">
     <p>Regresar</p>
 </a>
 
-<?php include 'includes/footer.php'?>
+<?php include '../includes/footer.php'?>

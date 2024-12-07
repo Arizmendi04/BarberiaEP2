@@ -1,5 +1,5 @@
-<?php include "Static/connect/db.php" ?>
-<?php include 'includes/header.php'?>
+<?php include "../Static/connect/db.php" ?>
+<?php include '../includes/header.php'?>
 
 <!-- Agregar estilo para centrar la tabla -->
 <style>
@@ -8,6 +8,8 @@
         text-align: center; /* Alinea el contenido de la tabla al centro */
     }
 </style>
+
+<link rel="stylesheet" href="../Static/css/app.css">
 
     <table class = "table-primary centered-table">
         <thead>
@@ -27,7 +29,6 @@
 ?>    
     
         <tr>
-
             <th><?php echo $rows['nombre']; ?></th>
             <th><?php echo $rows['precio']; ?></th>
         </tr>
@@ -40,11 +41,11 @@
 
 <br><br><br>
 
-<p>¿Te interesa lo que estás viendo? <a href="registro.php" style="color:blue;">regístrate aquí</a> y agenda una cita.</p>
+<p>¿Te interesa lo que estás viendo? <a href="../usuarioRegistrado/registro.php" style="color:blue;">regístrate aquí</a> y agenda una cita.</p>
 
-<a href="index.php" class="enlace">
-    <img src="./Static/img/back.png">
+<a href="../index.php" class="enlace">
+    <img src="../Static/img/back.png">
     <p>Regresar</p>
 </a>
 
-<?php include 'includes/footer.php'?>
+<?php include '../includes/footer.php'?>

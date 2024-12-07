@@ -14,8 +14,8 @@ CREATE TABLE servicios (
 -- Tabla de Usuarios
 CREATE TABLE usuarios (
     id INT(11) NOT NULL AUTO_INCREMENT,
-    usuario VARCHAR(15) NOT NULL,
-    contrasena VARCHAR(10) NOT NULL,
+    usuario VARCHAR(40) NOT NULL,
+    contrasena VARCHAR(15) NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -34,12 +34,10 @@ CREATE TABLE horarios (
 CREATE TABLE citas (
     id INT(11) NOT NULL AUTO_INCREMENT,
     id_usuario INT(11) NOT NULL,
-    id_servicio INT(11) NOT NULL,
     id_horario INT(11) NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_servicio) REFERENCES servicios(id),
     FOREIGN KEY (id_horario) REFERENCES horarios(id)
 );
 
@@ -57,17 +55,31 @@ INSERT INTO servicios (nombre, precio) VALUES
 
 -- Insertar algunos datos de ejemplo en la tabla de usuarios
 INSERT INTO usuarios (usuario, contrasena) VALUES 
-    ('admin1', '123qaz'),
-    ('admin2', '123qaz'),
-    ("Jesus","123");
+    ('Admin@upemor.edu.mx', '12345qaz'),
+    ("Jesus@upemor.edu.mx","12345678");
 
 -- Insertar algunos horarios de ejemplo
 INSERT INTO horarios (fecha, hora_inicio, hora_fin) VALUES
-    ('2024-10-07', '09:00:00', '10:00:00'),
-    ('2024-10-07', '10:00:00', '11:00:00'),
-    ('2024-10-07', '11:00:00', '12:00:00'),
-    ('2024-10-08', '09:00:00', '10:00:00'),
-    ('2024-10-08', '10:00:00', '11:00:00');
+    ('2024-10-13', '09:00:00', '10:00:00'),
+    ('2024-10-12', '10:00:00', '11:00:00'),
+    ('2024-10-12', '11:00:00', '12:00:00'),
+    ('2024-10-12', '12:00:00', '13:00:00'),
+    ('2024-10-13', '10:00:00', '11:00:00'),
+    ('2024-10-13', '11:00:00', '12:00:00'),
+    ('2024-10-13', '12:00:00', '13:00:00'),
+    ('2024-10-13', '13:00:00', '14:00:00'),
+    ('2024-10-14', '09:00:00', '10:00:00'),
+    ('2024-10-14', '10:00:00', '11:00:00'),
+    ('2024-10-14', '11:00:00', '12:00:00'),
+    ('2024-10-14', '12:00:00', '13:00:00'),
+    ('2024-10-15', '09:00:00', '10:00:00'),
+    ('2024-10-15', '10:00:00', '11:00:00'),
+    ('2024-10-15', '11:00:00', '12:00:00'),
+    ('2024-10-15', '12:00:00', '13:00:00'),
+    ('2024-10-16', '09:00:00', '10:00:00'),
+    ('2024-10-16', '10:00:00', '11:00:00'),
+    ('2024-10-16', '11:00:00', '12:00:00'),
+    ('2024-10-16', '12:00:00', '13:00:00');
 
 ALTER TABLE horarios ADD COLUMN disponible BOOLEAN DEFAULT 1;
 

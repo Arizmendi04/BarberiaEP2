@@ -1,6 +1,17 @@
-<?php 
-include "includes/header.php"; 
-include "Static/connect/db.php";
+<?php include '../includes/head.php' ?>
+<?php include "../Static/connect/db.php"; ?>
+
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
+
+<?php
 
 // Inicializar variables
 $fecha = "";
@@ -70,8 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['fecha'])) {
 <br><br><br>
 
 <a href="usermenu.php" class="enlace">
-    <img src="./Static/img/back.png" alt="Regresar">
+    <img src="../Static/img/back.png" alt="Regresar">
     <p>Regresar</p>
 </a>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

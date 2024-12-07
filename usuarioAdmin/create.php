@@ -1,4 +1,14 @@
-<?php  include 'includes/header.php'?>
+<?php  include '../includes/head.php'?>
+
+<?php
+    session_start();
+    // Verificar si la sesión está activa
+    if (!isset($_SESSION['usuario'])) {
+        // Si no hay sesión, redirigir al login
+        header("Location: ../login.php");
+        exit();
+    }
+?>
 
  <h6>Incorpora servicios</h6>
  
@@ -20,12 +30,12 @@
      <div class="form_container">                    
        <input type="button" value="Enviar Datos"  class="formulario_btn" onclick="validacion()">                    
        </div> 
-       <script src='Static/js/appvlidacion.js'></script>         
+       <script src='../Static/js/appvlidacion.js'></script>         
 </form>
 
 <a href="admin.php" class="enlace">
-  <img src="./Static/img/back.png">
+  <img src="../Static/img/back.png">
   <p>Regresar</p>
 </a>
            
-<?php  include 'includes/footer.php'; ?>
+<?php  include '../includes/footer.php'; ?>
