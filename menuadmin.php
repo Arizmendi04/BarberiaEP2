@@ -17,6 +17,11 @@
                               <img src="./Static/img/admin.png">
                               <p>Opciones</p>
                         </a>
+
+                        <a href="reportes.php" class="enlace">
+                              <img src="./Static/img/doc.png">
+                              <p>Generar reportes</p>
+                        </a>
                         
                         <a href="logout.php" class="enlace">
                               <img src="./Static/img/logout.png">
