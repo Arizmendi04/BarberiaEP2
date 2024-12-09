@@ -1,0 +1,56 @@
+/* Colores */
+
+:root {
+    --night: #0A100D;
+    --ash-gray: #B9BAA3;
+    --timberwolf: #D6D5C9;
+    --auburn: #A22C29;
+    --burnt-umber: #902923;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--night);
+    color: white;
+}
+
+/* Logo */
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Navegación */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--burnt-umber); /* Cambia de color al pasar el mouse */
+}
+
+.footer {
+    background-color: var(--night); /* Color de fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar texto */
+    padding: 10px 0; /* Espaciado superior e inferior */
+    font-size: 14px; /* Tamaño de fuente */
+    width: 100%; /* Ocupa todo el ancho */
+}

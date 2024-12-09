@@ -1,0 +1,64 @@
+:root {
+    --night: #0A100D;
+    --ash-gray: #B9BAA3;
+    --timberwolf: #D6D5C9;
+    --auburn: #A22C29;
+    --burnt-umber: #902923;
+}
+
+.body_index{
+    background-color: var(--timberwolf);
+}
+
+/* Estilo imagenes */
+
+.logo_index{
+    text-align: center;
+    margin-top: 25px;
+    
+}
+
+.imagen_index{
+    width: 22%;
+    height: 22%;    
+}
+
+/* Estilo index*/
+
+/* Contenedor de los enlaces */
+.Enlaces_index {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    background-color: var(--burnt-umber);
+    display: flex; /* Activa el diseño flexbox */
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 15px; /* Espaciado entre los elementos */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para cada enlace */
+.Enlaces_index .enlace {
+    font-weight: bold;
+    display: flex; /* Apila la imagen y el texto en columna */
+    flex-direction: column; /* Ordena imagen arriba y texto abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Color del texto */
+    font-size: 14px; /* Tamaño del texto compacto */
+}
+
+.Enlaces_index .enlace :hover{
+    color: black; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilo para las imágenes */
+.Enlaces_index .enlace img {
+    width: 40px; /* Tamaño pequeño para las imágenes */
+    height: 40px; /* Ajusta proporciones */
+    margin-bottom: 5px; /* Espacio entre imagen y texto */
+}
+
