@@ -1,47 +1,73 @@
-<?php  include '../includes/head.php'?>
+<?php  
+include '../includes/head.php';
+session_start();
 
-<?php
-      session_start();
-      if(isset($_SESSION['usuario'])){
-            $user = $_SESSION['usuario'];
+if(isset($_SESSION['usuario'])){
+    $user = $_SESSION['usuario'];
+} else {
+    header("Location: login.php");
+    exit(); // Asegura que no se ejecuta el resto del script si redirige
+}
 ?>
-            <article class="entrada">
-                  <div class="entrada_contenido">
-                        <h4 class="no-margin">Barbershop México</h4>
 
-                        <?php
-                              echo "<h4>Hola " . $user . "</h4>"; 
-                        ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop México</title>
+    <link rel="stylesheet" href="../Static/css/styles.css">
+    <link rel="stylesheet" href="../Static/css/header.css">
+    <link rel="stylesheet" href="../Static/css/index.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">Barberia Calaca</div>
+        <nav>
+            <ul>
+                <li><a href="menuadmin.php">Inicio</a></li>
+                <li><a href="#about">Acerca</a></li>
+                <li><a href="../logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                        <a href="admin.php" class="enlace">
-                              <img src="../Static/img/admin.png">
-                              <p>Opciones</p>
-                        </a>
+    <main>
+            <div>
+                  <br>
+                  <h1 style="text-align: center"> Opciones de administrador. </h1>
+                  <br>
+                  <h4 style="text-align: center">Hola! <?php echo $user; ?></h4>
+            </div>
 
-                        <a href="reportes.php" class="enlace">
-                              <img src="./Static/img/doc.png">
-                              <p>Generar reportes</p>
-                        </a>
-                        
-                        <a href="../logout.php" class="enlace">
-                              <img src="../Static/img/logout.png">
-                              <p>Cerrar sesión</p>
-                        </a>
+            <div class="logo_index">
+             <img src="../Static/img/calaca3.png" alt="Descripción de la imagen" class="imagen_index">
+            </div>  
 
-                        <p class="parrafo">¡Bienvenido de nuevo, <?php echo $user; ?>! Nos alegra tenerte con nosotros en Barbershop México. Estamos comprometidos a ofrecerte la mejor experiencia en estilo y cuidado personal. Explora nuestras opciones, ajusta tu estilo y deja que nuestros expertos cuiden de ti. ¡Gracias por elegirnos, y disfruta de tu visita!</p>
-                  </div>
+            <div class="Enlaces_index">
+                  <a href="admin.php" class="enlace">
+                    <img src="../Static/img/admin.png" alt="Opciones">
+                    <p>Opciones</p>
+                </a>
 
-                  <div class="entrada__imagen">
-                        <picture> 
-                              <img loading="lazy" src="../Static/img/2.jpg"> 
-                        </picture> 
-                  </div>
+                <a href="reportes.php" class="enlace">
+                    <img src="../Static/img/doc.png" alt="Reportes">
+                    <p>Generar reportes</p>
+                </a>
+                
+                <a href="../logout.php" class="enlace">
+                    <img src="../Static/img/logout.png" alt="Cerrar sesión">
+                    <p>Cerrar sesión</p>
+                </a>
+            </div>
+            <br>
 
-            </article>          
-<?php
-      }else{
-            header("Location: login.php");
-      }
-?>
-        
-<?php  include '../includes/footer.php'; ?>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Derechos reservados © Barbería Calaca</p>
+    </footer>
+</body>
+</html>
