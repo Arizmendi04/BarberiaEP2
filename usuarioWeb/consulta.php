@@ -76,12 +76,6 @@ $servicios = obtenerServicios($conn);
             ¿Te interesa lo que estás viendo? 
             <a href="../usuarioRegistrado/registro.php" class="text-primary">Regístrate aquí</a> y agenda una cita.
         </p>
-
-        <p style="text-align: center">
-            ¿Te interesa lo que estás viendo? 
-            <a href="../usuarioRegistrado/registro.php" class="text-primary">Regístrate aquí</a> y agenda una cita.
-        </p>
-
     </main>
 
     <footer class="footer">

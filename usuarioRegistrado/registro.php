@@ -1,4 +1,3 @@
-<?php include '../includes/head.php'; ?>
 
 <h6>Regístrate</h6>
 

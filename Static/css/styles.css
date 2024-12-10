@@ -12,6 +12,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ordena en una columna */
+    min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal crezca para llenar el espacio */
 }
 
 .parent {
