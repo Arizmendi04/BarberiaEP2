@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../Static/css/styles.css">
     <link rel="stylesheet" href="../Static/css/login.css">
     <link rel="stylesheet" href="../Static/css/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="../Static/js/appvausuario.js" defer></script>
+    <script src="/ED1/Static/js/appvausuario.js" defer></script>
 </head>
 <body class="auth-page">
     <!-- Header -->
@@ -26,8 +27,14 @@
     <!-- Main Content -->
     <main>
         <br>
-        <h1 style="text-align: center; background-color: #ffffff; margin-left: 10%; margin-right: 10%; border-radius: 10px";>Registro</h2>
+        <h1 style="text-align: center; background-color: #ffffff; margin-left: 10%; margin-right: 10%; border-radius: 10px;">Registro</h1>
         <br>
+        
+        <!-- Contenedor para los mensajes de error -->
+        <div id="error-messages" class="container" style="display: none;">
+            <div class="alert alert-danger" role="alert" id="error-text"></div>
+        </div>
+
         <form method="POST" name="frm1" id="frm1" action="../altausuario.php" class="login-form">
             <div class="form_container">
                 <label for="nameuser" class="formulario_label">Usuario:</label>
@@ -45,16 +52,15 @@
             </div>
 
             <div class="form_container" style="margin-top: 20px;">
-                <input type="button" value="Enviar Datos" class="formulario_btn" onclick="validacionU()">
+                <input type="button" value="Enviar Datos" class="formulario_btn" onclick="return validacionU()">
             </div>
         </form>
-
-
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <p>Derechos reservados © Barbería Calaca</p>
     </footer>
+
 </body>
 </html>

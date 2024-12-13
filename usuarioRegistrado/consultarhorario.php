@@ -11,6 +11,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="../Static/css/horarios.css">
+
     <h2>Los horarios disponibles son: </h2>
 
     <table class = "table-primary centered-table">

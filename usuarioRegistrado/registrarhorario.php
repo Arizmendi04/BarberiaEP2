@@ -11,6 +11,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="../Static/css/registrarH.css">
+
 <?php
 
 // Inicializar variables

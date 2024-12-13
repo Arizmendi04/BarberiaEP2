@@ -11,6 +11,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="../Static/css/consulta.css">
+
     <table class = "table-info">
         <thead>
             <TR>

@@ -11,6 +11,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="../Static/css/update.css">
+
 <?php
     if(isset($_GET['id'])){
         

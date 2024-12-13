@@ -1,0 +1,131 @@
+/* Variables de colores */
+:root {
+    --background: #F5F5F5;
+    --primary: #A22C29;
+    --secondary: #902923;
+    --highlight: #FFFFFF;
+    --text-dark: #0A100D;
+    --text-light: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(242, 243, 245, 0.8);
+}
+
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+h2 {
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Tabla */
+.table-primary {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: var(--highlight);
+    box-shadow: 0 4px 6px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Encabezados de tabla */
+.table-primary thead th {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* Filas de tabla */
+.table-primary tr {
+    text-align: center;
+}
+
+.table-primary th,
+.table-primary td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--hover-bg);
+}
+
+.table-primary tr:hover {
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
+/* Última fila no tiene borde */
+.table-primary tr:last-child td {
+    border-bottom: none;
+}
+
+/* Enlace para regresar */
+.enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: background-color 0.3s, transform 0.3s;
+    width: fit-content;
+    text-align: center;
+    gap: 10px;
+}
+
+.enlace img {
+    width: 24px;
+    height: 24px;
+}
+
+.enlace:hover {
+    background-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px var(--shadow);
+}
+
+.enlace p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .table-primary {
+        width: 100%;
+    }
+
+    .enlace {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0.8rem;
+    }
+
+    .enlace img {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,156 @@
+/* Variables de colores */
+:root {
+    --background: #F5F5F5;
+    --primary: #A22C29;
+    --secondary: #902923;
+    --highlight: #FFFFFF;
+    --text-dark: #0A100D;
+    --text-light: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(242, 243, 245, 0.8);
+    --btn-hover: #8C1F1C;
+}
+
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+h4 {
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Formularios */
+form {
+    background-color: var(--highlight);
+    box-shadow: 0 4px 6px var(--shadow);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.formulario_label {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.formulario_entrada {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--shadow);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.formulario_entrada:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(162, 44, 41, 0.5);
+}
+
+.formulario_btn {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.formulario_btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Select */
+select.formulario_entrada {
+    appearance: none;
+    background-color: var(--highlight);
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22none%22 stroke%3D%22%23000%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22%3E%3Cpath d%3D%22M6 9l6 6 6-6%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+select.formulario_entrada:hover {
+    border-color: var(--primary);
+}
+
+/* Enlace para regresar */
+.enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: background-color 0.3s, transform 0.3s;
+    width: fit-content;
+    text-align: center;
+    gap: 10px;
+}
+
+.enlace img {
+    width: 24px;
+    height: 24px;
+}
+
+.enlace:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px var(--shadow);
+}
+
+.enlace p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+
+    .enlace {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0.8rem;
+    }
+
+    .enlace img {
+        margin-bottom: 5px;
+    }
+}

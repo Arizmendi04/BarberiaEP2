@@ -1,0 +1,129 @@
+/* Variables de colores */
+:root {
+    --background: #F5F5F5;
+    --primary: #A22C29;
+    --secondary: #902923;
+    --highlight: #FFFFFF;
+    --text-dark: #0A100D;
+    --text-light: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --table-border: #DDDDDD;
+    --hover-bg: rgba(242, 243, 245, 0.8);
+    --btn-hover: #8C1F1C;
+}
+
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tabla */
+table {
+    width: 90%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--highlight);
+    box-shadow: 0 4px 6px var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezados de la tabla */
+thead tr {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+thead th {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Filas de la tabla */
+tbody tr {
+    text-align: center;
+    border-bottom: 1px solid var(--table-border);
+    transition: background-color 0.3s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--hover-bg);
+}
+
+tbody tr:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+/* Celdas de la tabla */
+th, td {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+td {
+    color: var(--text-dark);
+}
+
+/* Enlace para regresar */
+.enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: background-color 0.3s, transform 0.3s;
+    width: fit-content;
+    text-align: center;
+    gap: 10px;
+}
+
+.enlace img {
+    width: 24px;
+    height: 24px;
+}
+
+.enlace:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px var(--shadow);
+}
+
+.enlace p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    .enlace {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0.8rem;
+    }
+
+    .enlace img {
+        margin-bottom: 5px;
+    }
+}

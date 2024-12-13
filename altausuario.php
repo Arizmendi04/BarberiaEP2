@@ -1,6 +1,8 @@
 <?php include "Static/connect/db.php"; ?>
 <?php include 'includes/header.php'; ?>
 
+<link rel="stylesheet" href="/ED1/Static/css/altaU.css">
+
 <?php 
     require 'vendor/autoload.php'; 
 
@@ -68,7 +70,7 @@
 
 <br><br><br>
 
-<a href="index.php" class="enlace">
+<a href="index.html" class="enlace" style="outline: none;">
     <img src="./Static/img/back.png">
     <p>Regresar</p>
 </a>

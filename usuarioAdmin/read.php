@@ -11,6 +11,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="../Static/css/read.css">
+
     <table class = "table-primary centered-table">
         <thead>
             <TR>

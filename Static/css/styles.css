@@ -1,59 +1,125 @@
 /* Colores */
-
 :root {
     --night: #0A100D;
     --ash-gray: #B9BAA3;
     --timberwolf: #D6D5C9;
     --auburn: #A22C29;
     --burnt-umber: #902923;
+    --highlight: rgba(255, 255, 255, 0.8); /* Fondo destacado */
+    --shadow: rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    --hover-bg: rgba(255, 255, 255, 0.9); /* Fondo en hover */
 }
 
 /* Estilo general */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--ash-gray);
+    color: var(--night);
     display: flex;
-    flex-direction: column; /* Ordena en una columna */
-    min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--auburn);
+    color: var(--highlight);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--burnt-umber);
 }
 
 main {
-    flex: 1; /* Hace que el contenido principal crezca para llenar el espacio */
+    flex: 1;
+    padding: 20px;
+    text-align: center;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-    grid-template-rows: 1fr; /* Una fila */
-    gap: 10px; /* Espacio entre columnas y filas */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--auburn);
 }
 
-.parent div {
-    display: flex; /* Usar Flexbox dentro de los divs */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-}
-
+/* Imagen como banner */
 .parent img {
-    width: 50%; /* Ajusta el ancho de la imagen al contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 100%; /* Evita que la imagen exceda el tamaño del contenedor */
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    max-height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px var(--shadow);
+    margin-bottom: 20px;
 }
 
-/* Diseño responsivo para pantallas pequeñas */
+/* Estilo para la tabla */
+.table {
+    background-color: var(--highlight);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow);
+    margin: 20px auto;
+    width: 95%; /* Mayor ancho */
+    max-width: 1200px; /* Limite ancho */
+}
+
+.table th {
+    background-color: var(--auburn);
+    color: var(--highlight);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.table tr:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Diseño responsivo */
 @media (max-width: 768px) {
     .parent {
-        grid-template-columns: 1fr; /* Una sola columna */
-        grid-template-rows: auto; /* Tantas filas como sean necesarias */
+        grid-template-columns: 1fr;
     }
 
-    .parent img {
-        width: 80%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table {
+        width: 100%;
     }
 }
-
-
-
-
-
-

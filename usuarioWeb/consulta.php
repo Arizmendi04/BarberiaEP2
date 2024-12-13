@@ -1,23 +1,23 @@
 <?php
-// Incluir conexión a la base de datos
-include "../Static/connect/db.php";
+    // Incluir conexión a la base de datos
+    include "../Static/connect/db.php";
 
-// Obtener los datos de la base de datos
-function obtenerServicios($conn) {
-    $sql = "SELECT * FROM servicios;";
-    $exec = mysqli_query($conn, $sql);
-    $servicios = [];
+    // Obtener los datos de la base de datos
+    function obtenerServicios($conn) {
+        $sql = "SELECT * FROM servicios;";
+        $exec = mysqli_query($conn, $sql);
+        $servicios = [];
 
-    // Guardar resultados en un arreglo
-    while ($row = mysqli_fetch_array($exec)) {
-        $servicios[] = $row;
+        // Guardar resultados en un arreglo
+        while ($row = mysqli_fetch_array($exec)) {
+            $servicios[] = $row;
+        }
+
+        return $servicios;
     }
 
-    return $servicios;
-}
-
-// Obtener los servicios
-$servicios = obtenerServicios($conn);
+    // Obtener los servicios
+    $servicios = obtenerServicios($conn);
 ?>
 
 <!DOCTYPE html>

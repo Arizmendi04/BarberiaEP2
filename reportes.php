@@ -5,6 +5,9 @@
       if(isset($_SESSION['usuario'])){
             $user = $_SESSION['usuario'];
 ?>
+
+<link rel="stylesheet" href="Static/css/reportes.css">
+
             <article class="entrada">
                   <div class="entrada_contenido">
                         <h4 class="no-margin">Barbershop México</h4>
@@ -43,7 +46,7 @@
 
                   <div class="entrada__imagen">
                         <picture> 
-                              <img loading="lazy" src="./Static/img/2.jpg"> 
+                              <img loading="lazy" src="./Static/img/calaca2.png"> 
                         </picture> 
                   </div>
 

@@ -6,59 +6,74 @@
     --burnt-umber: #902923;
 }
 
-.body_index{
+.body_index {
     background-color: var(--timberwolf);
+    font-family: Arial, sans-serif;
 }
 
 /* Estilo imagenes */
-
-.logo_index{
+.logo_index {
     text-align: center;
     margin-top: 25px;
-    
 }
 
-.imagen_index{
+.imagen_index {
     width: 20%;
-    height: 20%;    
+    height: auto; /* Mantiene la proporción original */
+    transition: transform 0.3s ease;
 }
 
-/* Estilo index*/
+.imagen_index:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
 
-/* Contenedor de los enlaces */
+/* Estilo index */
 .Enlaces_index {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 30px;
     background-color: var(--burnt-umber);
-    display: flex; /* Activa el diseño flexbox */
-    justify-content: space-around; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-    gap: 15px; /* Espaciado entre los elementos */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Enlaces_index:hover {
+    transform: translateY(-5px); /* Eleva el contenedor al pasar el mouse */
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Estilo para cada enlace */
 .Enlaces_index .enlace {
     font-weight: bold;
-    display: flex; /* Apila la imagen y el texto en columna */
-    flex-direction: column; /* Ordena imagen arriba y texto abajo */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-decoration: none; /* Elimina el subrayado */
-    color: white; /* Color del texto */
-    font-size: 14px; /* Tamaño del texto compacto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.Enlaces_index .enlace :hover{
-    color: black; /* Cambia de color al pasar el mouse */
+.Enlaces_index .enlace:hover {
+    color: var(--ash-gray); /* Cambia de color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
 /* Estilo para las imágenes */
 .Enlaces_index .enlace img {
-    width: 40px; /* Tamaño pequeño para las imágenes */
-    height: 40px; /* Ajusta proporciones */
-    margin-bottom: 5px; /* Espacio entre imagen y texto */
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.Enlaces_index .enlace img:hover {
+    transform: rotate(15deg) scale(1.2); /* Gira y escala la imagen */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}

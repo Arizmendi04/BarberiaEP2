@@ -1,5 +1,7 @@
 <?php include '../includes/head.php'; ?>
 
+<link rel="stylesheet" href="../Static/css/menu.css">
+
 <?php
     session_start();
     if (isset($_SESSION['usuario'])) {

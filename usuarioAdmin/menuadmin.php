@@ -1,13 +1,13 @@
 <?php  
-include '../includes/head.php';
-session_start();
+    include '../includes/head.php';
+    session_start();
 
-if(isset($_SESSION['usuario'])){
-    $user = $_SESSION['usuario'];
-} else {
-    header("Location: login.php");
-    exit(); // Asegura que no se ejecuta el resto del script si redirige
-}
+    if(isset($_SESSION['usuario'])){
+        $user = $_SESSION['usuario'];
+    } else {
+        header("Location: login.php");
+        exit(); // Asegura que no se ejecuta el resto del script si redirige
+    }
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ if(isset($_SESSION['usuario'])){
                     <p>Opciones</p>
                 </a>
 
-                <a href="reportes.php" class="enlace">
+                <a href="../reportes.php" class="enlace">
                     <img src="../Static/img/doc.png" alt="Reportes">
                     <p>Generar reportes</p>
                 </a>
